@@ -440,16 +440,12 @@ body{
             <form method="post" action="loginOk">
                 
                     <div class="field input">
-                        <label>Username</label>
-                        <input type="text" placeholder="Enter your name" name="username">
-                    </div>
-                    <div class="field input">
                         <label>Userid</label>
                         <input type="text" placeholder="Enter your name" name="userid">
                     </div>
                     <div class="field input">
                         <label>Password</label>
-                        <input type="text" placeholder="Enter your Password" name="password">
+                        <input type="password" placeholder="Enter your Password" name="password">
                         <i class="fas fa-eye"></i>
                     </div>
                     <div class="field button">

@@ -441,12 +441,15 @@ body{
                 
                     <div class="field input">
                         <label>Username</label>
-                        <input type="text" placeholder="사용자 이름을 입력해주세요" name="userid">
+                        <input type="text" placeholder="사용자 이름을 입력해주세요" name="username">
                     </div>
-       
+                    <div class="field input">
+                        <label>Userid</label>
+                        <input type="text" placeholder="Enter your name" name="userid">
+                    </div>
                     <div class="field input">
                         <label>Password</label>
-                        <input type="text" placeholder="비밀번호를 입력하세요" name="password">
+                        <input type="password" placeholder="비밀번호를 입력하세요" name="password">
                         <i class="fas fa-eye"></i>
                     </div>
                     <div class="field button">

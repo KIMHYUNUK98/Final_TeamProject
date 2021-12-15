@@ -37,7 +37,7 @@ body{
                 <div class="w3-right w3-hide-small">
                     <a href="#" onclick="location.href='member'" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue w3-mobile">MEMBER</a>
                     <a href="#" onclick="location.href='main'" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue w3-mobile">BOARD</a>
-                    <a href="#" onclick="location.href='../login/enroll'" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue w3-mobile">ABOUT</a>
+                    <a href="#" onclick="location.href='about'" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue w3-mobile">ABOUT</a>
                 </div>
             </div>
         </div>
@@ -73,9 +73,9 @@ body{
 					</a>
 					</p>
 					<p>
-					<a href="#" onclick="location.href='func1'">
+					<a href="#" onclick="location.href='../grade/list'">
 					<span class="w3-tag w3-white w3-margin-left w3-hover-red w3-xlarge w3-padding w3-round-large w3-center" style="width:85%;">
-					 Function1
+					 Grade
 					</span>
 					</a>
 					</p>

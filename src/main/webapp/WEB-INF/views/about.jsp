@@ -83,9 +83,9 @@ body {
 						</a>
 					</p>
 					<p>
-						<a href="#" onclick="location.href='func1'"> <span
+						<a href="#" onclick="location.href='../grade/list'"> <span
 							class="w3-tag w3-white w3-margin-left w3-hover-red w3-xlarge w3-padding w3-round-large w3-center"
-							style="width: 85%;"> Function1 </span>
+							style="width: 85%;"> Grade </span>
 						</a>
 					</p>
 					<p>
@@ -135,12 +135,8 @@ body {
 									<span class="w3-tag" style="width: 100%";></span>
 									
 									<span class="w3-tag w3-light-grey w3-margin-left w3-margin-right  w3-xMedium w3-padding w3-round-large w3-left-align">
-										1. Table 만들기<br>
-										2. 벡 엔드(Back-end) 구현<br>
-										3. 프론트 엔드(Front-end)꾸미기<br>
-										4. 필요한 기능 정리하기<br>
-										5. 로그인 페이지 구상 및 의논하기<br>
-										6. 등등<br>
+										김현욱 - 프론트 엔드 (Front-end)<br>
+										김형진 - 백 엔드 (Back-end)
 									</span>
 								</div>
 								<div class="col-sm-6">

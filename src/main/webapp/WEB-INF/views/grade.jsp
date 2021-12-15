@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="com.my.app.board.BoardDAO, com.my.app.board.BoardVO,java.util.*"%>
+<%@page import="com.my.app.board.GradeDAO, com.my.app.board.GradeVO,java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/lib/w3.css">
 <link rel="stylesheet" href="/lib/bootstrap.min.css">
-<title>Main</title>
+<title>성적 관리</title>
 <style>
 body{
 	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
@@ -30,9 +30,7 @@ body{
 </script>
 </head>
 <body>
-	
-	<!-- 페이지 전체 Container -->
-    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
     
 		<!-- 배너 -->
         <div class="banner">
@@ -41,9 +39,9 @@ body{
 					GRADE MANAGER</a>
                 <!-- 오른쪽으로 정렬하고 작아지면 숨기는 기능 -->
                 <div class="w3-right w3-hide-small">
-                    <a href="#" onclick="location.href='member'" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue w3-mobile">MEMBER</a>
-                    <a href="#" onclick="location.href='main'" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue w3-mobile">BOARD</a>
-                    <a href="#" onclick="location.href='about'" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue w3-mobile">ABOUT</a>
+                    <a href="#" onclick="location.href='../board/member'" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue w3-mobile">MEMBER</a>
+                    <a href="#" onclick="location.href='../board/main'" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue w3-mobile">BOARD</a>
+                    <a href="#" onclick="location.href='../board/about'" class="w3-bar-item w3-button w3-hover-none w3-hover-text-blue w3-mobile">ABOUT</a>
                 </div>
             </div>
         </div>
@@ -58,28 +56,28 @@ body{
 					</span>
 					</p>
 					<p>
-					<a href="#" onclick="location.href='member'">
+					<a href="#" onclick="location.href='../board/member'">
 					<span class="w3-tag w3-white w3-hover-red w3-margin-left  w3-xlarge w3-padding w3-round-large w3-center" style="width:85%;">
 					 Member
 					</span>
 					</a>
 					</p>
 					<p>
-					<a href="#" onclick="location.href='main'">
+					<a href="#" onclick="location.href='../board/main'">
 					<span class="w3-tag w3-white w3-margin-left w3-hover-red w3-xlarge w3-padding w3-round-large w3-center" style="width:85%;">
 					 Board
 					</span>
 					</a>
 					</p>
 					<p>
-					<a href="#" onclick="location.href='about'">
+					<a href="#" onclick="location.href='../board/about'">
 					<span class="w3-tag w3-white w3-margin-left w3-hover-red w3-xlarge w3-padding w3-round-large w3-center" style="width:85%;">
 					 About
 					</span>
 					</a>
 					</p>
 					<p>
-					<a href="#" onclick="location.href='../grade/list'">
+					<a href="#" onclick="location.href='grade'">
 					<span class="w3-tag w3-white w3-margin-left w3-hover-red w3-xlarge w3-padding w3-round-large w3-center" style="width:85%;">
 					 Grade
 					</span>
@@ -102,7 +100,7 @@ body{
 	                   
                             <p>
 							<span class="w3-tag w3-margin-left w3-margin-top w3-xlarge w3-padding w3-round-large w3-center">
-							 회원전용 자유게시판
+							 나의 성적관리 페이지
 							</span>
 							</p>
                         
@@ -110,25 +108,23 @@ body{
 							<table class="w3-table w3-striped w3-bordered w3-border">
 							<thead>
 							<tr class="w3-black w3-hover-black">
-								<th>Id</th>
-								<th>Title</th>
-								<th>Category</th>
-								<th>Writer</th>
-								<th>Content</th>
-								<th>Regdate</th>
-								<th>Edit</th>
-								<th>Delete</th>
+								<th>이름</th>
+								<th>교시</th>
+								<th>성적</th>
+								<th>상세</th>
+								<th>날짜</th>
+								<th>수정</th>
+								<th>삭제</th>
 							</tr>
 							</thead>
 							<c:forEach items="${list}" var="u">
 								<tr class="w3-light-grey w3-hover-black">
-									<td>${u.getSeq()}</td>
-									<td>${u.getTitle()}</td>
-									<td>${u.getCategory()}
-									<td>${u.getWriter()}</td>
-									<td>${u.getContent()}</td>
-									<td>${u.getRegdate()}</td>
-									<td><a href="editform/${u.seq}">Edit</a></td>
+									<td>${u.title}</td>
+									<td>${u.period}</td>
+									<td>${u.grade}</td>
+									<td>${u.content}</td>
+									<td>${u.regdate}</td>
+									<td><a href="editpost/${u.seq}">Edit</a></td>
 									<td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
 								</tr>
 							</c:forEach>
@@ -140,6 +136,5 @@ body{
              </div>
          </div>
      </div>
-
 </body>
 </html>
