@@ -18,7 +18,7 @@ public class GradeController {
 	@RequestMapping(value = "/grade/list", method = RequestMethod.GET)
 	public String gradelist(Model model) {
 		model.addAttribute("list", gradeService.getGradeList());
-		return "grade";
+		return "redirect:/grade/" + username;
 	}
 	
 	@RequestMapping(value = "/grade/{name}", method = RequestMethod.GET)

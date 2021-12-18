@@ -79,13 +79,6 @@ body{
 					</span>
 					</a>
 					</p>
-					<p>
-					<a href="#" onclick="location.href='func2'">
-					<span class="w3-tag w3-white w3-margin-bottom w3-hover-red w3-margin-left  w3-xlarge w3-padding w3-round-large w3-center" style="width:85%;">
-					 Function2
-					</span>
-					</a>
-					</p>
         		</div>
         	</div>
             <div class="col-sm-10 w3-margin-top w3-margin-bottom">
