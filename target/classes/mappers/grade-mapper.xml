@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Grade">
+	<insert id="insertGrade">
+		insert into gradeDB  (member, title, period, grade, content)
+		values
+		(#{member} , #{title} , #{period} , #{grade} , #{content})
+	</insert>
+	<update id="updateGrade">
+		update gradeDB
+		set member=#{member}, title=#{title}, period=#{period}, grade=#{grade}, content=#{content} 
+		where seq=#{seq}
+	</update>
+	<delete id="deleteGrade">
+		delete from gradeDB where seq=#{seq}
+	</delete>
+	<select id="getGrade" resultType="grade">
+		select * from gradeDB where seq=#{seq}
+	</select>
+	<select id="getGradeList" resultType="grade">
+		select * from gradeDB order by seq desc
+	</select>
+	<select id="getMyGrade" resultType="grade">
+		select * from gradeDB where member=#{member} order by seq desc
+	</select>
+</mapper>

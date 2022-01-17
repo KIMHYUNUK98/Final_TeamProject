@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="User">
+	<select id="getUser" resultType="user">
+		select userid, username from memberDB
+		where userid=#{userid} and password=#{password}
+	</select>
+	<select id="setUser">
+		insert into memberDB (userid, username, password)
+      	values
+      	(#{userid}, #{username}, #{password})
+	</select>
+	<select id="getMemberList" resultType="user">
+		select * from memberDB order by seq desc
+	</select>
+</mapper>
